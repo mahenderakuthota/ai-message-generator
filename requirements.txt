@@ -1,0 +1,14 @@
+fastapi>=0.68.0
+uvicorn>=0.15.0
+python-dotenv>=0.19.0
+openai>=0.27.0
+pydantic>=1.8.0
+pydantic-settings
+langchain
+langchain-groq
+python-dotenv
+langgraph
+langchain_core
+langchain_community
+langchain_huggingface
+huggingface_hub
