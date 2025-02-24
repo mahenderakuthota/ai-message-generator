@@ -3,7 +3,7 @@ from pydantic import BaseModel
 class MessageRequest(BaseModel):
     tone: str
     context: str
-    interesets: str
+    interests: str
     hobbies: str
     recp_name: str
 
