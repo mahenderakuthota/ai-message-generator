@@ -12,3 +12,8 @@ langchain_core
 langchain_community
 langchain_huggingface
 huggingface_hub
+loguru
+python-json-logger
+langchain-astradb>=0.3.3
+sentence-transformers
+langchain-huggingface

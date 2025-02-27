@@ -32,7 +32,7 @@ class FreeTierMessageGenerator(MessageGenerator):
     - Hobby: {hobbies}
     if provided
         """
-        self.message_transformer=message_transformer
+        self.__message_transformer=message_transformer
         self.model=None
         self.chat_prompt=None
         self.initialize_ai_model()
@@ -54,9 +54,9 @@ class FreeTierMessageGenerator(MessageGenerator):
     def generate_message(self, message_request: MessageRequest) -> FlirtMessage:
         message = self.model.invoke(self.chat_prompt.format(name=message_request.recp_name,hobbies=message_request.hobbies, 
                                                             context=message_request.context,interests=message_request.interests, 
-                                                            tone=message_request.tone ))
-        if self.message_transformer:
-            message_content = self.message_transformer.transform_message(message.content)
+                                                            tone=message_request.tone))
+        if self.__message_transformer:
+            message_content = self.__message_transformer.transform_message(message.content)
         else:
             message_content = message.content
 
